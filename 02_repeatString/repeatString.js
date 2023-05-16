@@ -1,4 +1,4 @@
-
+// Successfully passed all tests:
 
 const repeatString = function repeatString (string, num) {
     
