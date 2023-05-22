@@ -6,12 +6,30 @@ const subtract = function(x, y) {
 	return x - y;
 };
 
-const sum = function(x, y) {
-	return x += y
+// try array.reduce() method:
+
+
+const sum = function(array) {
+  
+  let theSum = 0;
+  
+  let maxIndex = array.length - 1;
+  
+  for (let i = 0; i < 
+  array.length; i++) 
+  {
+  theSum += array[i] 
+  }
+  
+  console.log(theSum)
+  return theSum;
 };
 
+// Need to handle multiple numbers, maybe with ...operator:
+// and it does't even work with two numbers for some reason.
+
 const multiply = function(x, y) {
-  return x * y;
+  return (x*y)
 };
 
 const power = function(x, y) {
