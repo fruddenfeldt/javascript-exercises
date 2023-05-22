@@ -25,12 +25,25 @@ const sum = function(array) {
   return theSum;
 };
 
-// Need to handle multiple numbers, maybe with ...operator:
-// and it does't even work with two numbers for some reason.
+// Copy pasted from the web:
 
-const multiply = function(x, y) {
-  return (x*y)
-};
+//const multiply = function(...args){
+//  return args.reduce((acc, cur) => acc * cur);
+// }
+
+// my own version with a loop:
+
+const multiply = function(...args){
+  let sum = 1
+  for (let i = 0; i < args.length; i++) {
+    sum *= args[i]
+
+  }
+  console.log(sum)
+  return sum
+}
+
+
 
 const power = function(x, y) {
 	return Math.pow(x, y)
