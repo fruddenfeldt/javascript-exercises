@@ -11,8 +11,12 @@ const palindromes = function (string) {
     
     let reversedWordLowerCase = reversedWord.toLowerCase();
 
-    reversedStringWithNoSpaces = reversedWordLowerCase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
-    inputStringWithNoSpaces = stringLowerCase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+    reversedStringWithNoSpecialChars = reversedWordLowerCase.replace(/[^a-zA-Z0-9 ]/g, '');
+    inputStringWithNoSpecialChars = stringLowerCase.replace(/[^a-zA-Z0-9 ]/g, '');
+
+    reversedStringWithNoSpaces = reversedStringWithNoSpecialChars.replace(/\s+/g, '')
+    inputStringWithNoSpaces = inputStringWithNoSpecialChars.replace(/\s+/g, '')
+
   
     if (reversedStringWithNoSpaces == inputStringWithNoSpaces) return true;
     else return false;
