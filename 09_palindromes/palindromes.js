@@ -17,12 +17,20 @@ const palindromes = function (string) {
     reversedStringWithNoSpaces = reversedStringWithNoSpecialChars.replace(/\s+/g, '')
     inputStringWithNoSpaces = inputStringWithNoSpecialChars.replace(/\s+/g, '')
 
+    return reversedStringWithNoSpaces == inputStringWithNoSpaces
   
-    if (reversedStringWithNoSpaces == inputStringWithNoSpaces) return true;
-    else return false;
-  
+  //  if (reversedStringWithNoSpaces == inputStringWithNoSpaces) return true;
+  //  else return false;
+
   
 };
+
+  /* The provided solution, much cleaner:
+const palindromes = function (string) {
+    const processedString = string.toLowerCase().replace(/[^a-z]/g, "");
+    return processedString.split("").reverse().join("") == processedString;
+  };
+*/
 
 // Do not edit below this line
 module.exports = palindromes;
