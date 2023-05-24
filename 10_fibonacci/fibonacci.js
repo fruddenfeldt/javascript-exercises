@@ -5,6 +5,10 @@
 
 const fibonacci = function fibo(num){
     var a = 1, b = 0, temp;
+
+    if (num <0) {return 'OOPS'}
+
+    else
   
     while (num >= 1){
       temp = a;
