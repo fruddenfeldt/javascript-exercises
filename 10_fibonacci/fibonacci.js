@@ -6,7 +6,7 @@
 const fibonacci = function fibo(num){
     var a = 1, b = 0, temp;
   
-    while (num >= 0){
+    while (num >= 1){
       temp = a;
       a = a + b;
       b = temp;
